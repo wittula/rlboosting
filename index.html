@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="Profesjonalny boosting rang w Rocket League!">
+		<meta name="theme-color" content="#111">
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+		<meta property="og:title" content="Rocket League Boosting">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://rlboosting.pl">
+		<meta property="og:image" content="https://i.imgur.com/22kBObn.png">
+		<meta property="og:image:alt" content="Profesjonalny boosting rang w Rocket League!">
+		<meta property="og:description" content="Profesjonalny boosting rang w Rocket League!">
+
+
+		<title>Rocket League Boosting</title>
+	</head>
+
+	<body>
+		<div class="main--container" id="main">
+			<main class="main">
+				<h1 class="visuallyhidden">Wprowadzenie</h1>
+				<p class="main--description">Nie jesteś zadowolony z Twojej <strong class="highlight-y">obecnej rangi?</strong> Podobają Ci się <strong>nagrody za sezon</strong> których nie jesteś w stanie wbić samodzielnie? Trafiłeś w dobre miejsce - oferujemy <strong class="highlight-y">boosting</strong> w <strong>Rocket League</strong></p>
+				<div class="main--items">
+					<div class="main--item" id="localization">
+						<i class="fa-solid fa-arrow-trend-up fa-2x"></i>
+						<p class="main--info">Szybko i sprawnie</p>
+						<p class="main--info-value">100% zadowolenia klientów</p>		
+					</div>
+
+					<div class="main--item" id="localization">
+						<i class="fa-solid fa-bell-slash fa-2x"></i>
+						<p class="main--info">Dyskretnie</p>
+						<p class="main--info-value">nikomu nie mówimy kogo boostujemy</p>		
+					</div>
+
+					<div class="main--item">
+						<i class="fa-solid fa-comments fa-2x"></i>
+						<p class="main--info">W kontakcie</p>
+						<p class="main--info-value">jesteśmy w stałym kontakcie z klientem</p>		
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<div class="section--container">
+			<section class="section" id="price-list">
+				<h2 class="nomargin">Cennik</h2>
+				<span class="header--small--text">(nagrody sezonowe są wliczone w cenę)</span>
+				<p class="discount">Każda dodatkowa ranga (gdy mamy boostować więcej niż jedną rangę) daje <strong class="highlight-y">1% rabatu</strong> do zamówienia!</p>
+
+				<br>
+
+				<div class="section--content">
+					<div class="content--text half">
+						<table id="table-standard">
+							<tr>
+								<th>Ranga</th>
+								<th>Cena (cr)</th>
+								<th>Cena (PLN)</th>
+							</tr>
+						</table>
+
+					</div>
+
+					<div class="content--text half right">
+						<h4>Kalkulator</h4>
+						
+						<div id="calculator" class="calculator">
+							<div class="calculator--ranks">
+								<label for="actualRank">Obecna ranga: </label>
+  								<select id="actualRank">
+  								</select>
+							</div>
+							
+							<div class="calculator--ranks">
+								<label for="desiredRank">Docelowa ranga: </label>
+  								<select id="desiredRank">
+  								</select>
+							</div>
+  							
+  							<div class="calculator--ranks">
+  								<label for="gamemode">Tryb: </label>
+  								<select id="gamemode">
+	  								<option value="solo">1v1</option>
+	  								<option value="duo" selected>2v2</option>
+	  								<option value="trio">3v3 (+35%)</option>
+	  								<option value="extra">Tryby dodatkowe (+50%)</option>
+  								</select>
+  							</div>
+
+  							<div class="calculator--ranks">
+  								<label for="paymentMethod">Metoda płatności: </label>
+  								<select id="paymentMethod">
+	  								<option value="standard" selected>BLIK, PayPal, cr, przelew</option>
+	  								<option value="psc">Paysafecard (+50%)</option>
+  								</select>
+  							</div>
+
+  							<div class="calculator--ranks">
+  								<br>
+  								<label class="label">Transmisja gier na żywo <span class="highlight-y">(+15%)</span>
+  									<input type="checkbox" id="stream">
+  									<span class="checkmark"></span>
+  								</label>
+
+  								<label id="boosterLabel" class="label">Granie z boosterem <span class="highlight-y">(+50%)</span>
+  									<input type="checkbox" id="playWithBooster">
+									<span class="checkmark"></span>
+  								</label>
+  							</div>	
+  							
+
+  							<button class="calculator--button" onclick="calculate();">Oblicz</button>
+
+  							<p id="price" class="price">Wybierz rangi i oblicz cenę</p>
+						</div>
+
+						<br>
+
+						<h4>Ważne!</h4>
+						<p class="premium">Rangi <span class="highlight-y">GC2 - SSL</span> dotyczą tylko trybu <strong class="highlight-y">1v1</strong></p>
+						<p class="premium">Przedstawione ceny są <span class="highlight-y">poglądowe</span> - szczegółowe informacje na naszym  <a href="https://discord.gg/2SRhaDYrPr">serwerze Discord</a> u moderacji bądź we <strong>wiadomości prywatnej</strong>.</p>
+					</div>
+				</div>	
+			</section>
+		</div>
+			
+		<div class="section--container">
+			<section class="section" id="about">
+				<h2>O nas</h2>
+				<div class="section--content">
+					<div class="content--text">
+						<p>Jesteśmy doświadczonymi graczami <strong>Rocket League</strong> oferującymi jedne z najtańszych usług boostingu <strong>w Polsce.</strong> Wszystkie zlecenia staramy się realizować jak <strong>najszybciej</strong>, będąc w stałym kontakcie z klientem. Dzięki nam będziesz w stanie za niewielką cenę <em>przeskoczyć</em> barierę MMR <strong>bez stresu</strong> i użerania się z toksycznymi graczami.</p>
+					</div>
+
+					<div class="content--image right">
+						<img src="img/insake.png">
+					</div>
+				</div>
+
+				<div class="section--content">
+					<div class="content--image left">
+						<img src="img/czapla.png">
+					</div>
+
+					<div class="content--text">
+						<p>Usługi, które oferujemy, są <strong>bezpieczne</strong> dla Twojego konta. Jeśli nigdy tego nie robiłeś, nie wiesz na czym polega boosting, boisz się nam zaufać - <strong>nie martw się</strong>, zapraszamy Cię na specjalnie stworzony do tego <a href="https://discord.gg/2SRhaDYrPr">nasz serwer Discord</a>, gdzie wszystko wytłumaczymy <strong>od A do Z</strong>. W razie jakichkolwiek pytań - śmiało stwórz ticket na serwerze służący do kontaktu z boosterem, czy administracją - <strong>od tego jesteśmy!</strong>
+						</p>
+					</div>	
+				</div>
+
+				<br>
+
+				<div class="section--content">
+					<div class="content--text">
+						<h4>Najczęściej zadawane pytania</h4>
+
+						<h5>Na jakich serwerach oferujecie swoje usługi?</h5>
+						<p>Krótka, prosta odpowiedź - <strong>WSZYSTKICH</strong></p>
+
+						<h5>Czy jest możliwość blokady konta przez Epic Games za MMR Boosting?</h5>
+						<p>U nas masz pewnośc, że nie dostaniesz bana, gdyż każdy z naszych boosterów ma obowiązek używać VPN podczas gry <i>(jeśli klient jest z innego regionu)</i>.</p>
+
+						<h5>Ile potrwa MMR Boosting mojego konta?</h5>
+						<p>Żaden serwis nie jest w stanie odpowiedzieć na to pytanie dokładnie. Wszystko zależy od wielu czynników takich jak np. Twoje MMR czy inne zdarzenia losowe. Możemy za to napisać iż <strong>ŚREDNIO</strong> wbijamy jedną rangę dziennie.</p>
+
+						<h5>Kiedy rozpocznie się mój boosting?</h5>
+						<p>Zlecenie rozpoczynamy najszybciej jak to możliwe, przeważnie rozpoczyna się tego samego dnia lub maksymalnie następnego.</p>
+
+						<h5>Czy mogę w jakiś sposób skontrolować postęp MMR Boostera?</h5>
+						<p>Tak, wystarczy że skontaktujesz się z boosterem na prywatnym kanale, bądź wejdziesz na swojego <a href="https://rocketleague.tracker.network">trackera</a></p>
+
+						<h5>Czy mogę grać podczas boostowania konta?</h5>
+						<p>Oczywiście, że tak. Wystarczy jedynie określić w jakich godzinach będziesz na swoim koncie poprzez kontakt z nami lub boosterem na prywatnym kanale.</p>
+
+						<p>Surowo <strong class="highlight-r">ZABRONIONE</strong> jest wtedy granie <strong>GIER RANKINGOWYCH</strong>. Konsekwencją grania rankedów podczas procesu boostingu konta jest zatrzymanie wykonywania zamówionej usługi bez zwrotu pieniędzy z naszej strony. </p>
+					</div>
+
+				</div>
+				
+			</section>
+		</div>
+			
+		
+
+		<div class="section--container">
+			<section class="section" id="contact">
+				<h2>Kontakt</h2>
+				<p>Wejdź na nasz <span class="highlight-y">serwer Discord</span> gdzie dowiesz się więcej, klikając przycisk poniżej!</p>
+				<div class="center">
+					<a href="https://discord.gg/2SRhaDYrPr" class="button">
+						<span class="button--icon"><i class="fab fa-discord fa-lg"></i></span>
+						<span class="button--text">Rocket League Boosting</span>
+					</a>
+				</div>
+				
+			</section>
+		</div>
+
+		<footer class="footer">
+			<div class="socials footer--element">
+				<a href="https://discord.gg/2SRhaDYrPr"><i class="fab fa-discord fa-lg"></i></a>
+			</div>
+
+			<a href="#main" id="arrow-up" class="footer--element"><i class="fas fa-arrow-up fa-lg"></i></a>
+			<p class="footer--element"><strong>&copy; wittula, 2022</strong></p>
+		</footer>
+
+		<script src="script.js"></script>
+		<script src="https://kit.fontawesome.com/50b3ee0297.js" crossorigin="anonymous"></script>
+	</body>
+</html>

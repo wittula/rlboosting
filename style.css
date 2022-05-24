@@ -1,0 +1,462 @@
+* {
+	box-sizing: border-box; 
+	padding: 0; 
+	margin: 0;
+}
+
+body {
+	font-family: 'Poppins', sans-serif; 
+	font-size: 10pt;
+	background: #060c12;
+}
+
+.main--container {
+	background: #005dbf; 
+	background-image: url("background.jpg"); 
+	background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(50,50,65,.8) 100%), url("background.jpg"); 
+	background-attachment: fixed;
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: cover; 
+
+	width: 100vw;  
+	max-width: 100%; 
+
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+
+	line-height: 150%;
+}
+
+.only--mobile {
+	display: none;
+	height: 0;
+	width: 0;
+}
+
+.main {
+	width: 900px; 
+	color: #fff;
+	text-align: center;
+	margin: 150px;
+}
+
+.main--description {
+	padding: 30px 0;
+	font-size: 2.2em;
+	font-weight: 300;
+	line-height: 150%;
+	text-shadow: 0 0 10px #000;
+}
+
+.highlight-y {
+	color: #ff0;
+}
+
+.highlight-r {
+	color: #d11;
+}
+
+.main--items {
+	margin-top: 60px;
+	width: 900px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.main--item {
+	width: 250px;
+}
+
+.main--info {
+	padding: 10px 0;
+	font-size: .8em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: rgba(255,255,255,.8);
+}
+
+.main--info-value {
+	font-size: 1.3em;
+	letter-spacing: 2px;
+}
+
+.section--container {
+	width: 100vw; 
+	max-width: 100%; 
+
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+
+	background: rgb(8,15,23);
+	background: linear-gradient(0deg, rgba(8,15,23,1) 0%, rgba(12,26,33,1) 100%);
+	color: #fff; 
+
+	font-size: 1.1em;
+	line-height: 200%;
+}
+
+.section--container:nth-of-type(odd) {
+	background-image: url('img/section_bg.png');
+	color: #111;
+}
+
+.section {
+	width: 1000px; 
+	margin: 70px 0; 
+}
+
+.section p {
+	font-size: 14pt;
+	padding-bottom: 10px;
+	text-align: justify;
+}
+
+.section h2 {
+	margin-bottom: 50px;
+	font-size: 2em;
+}
+
+.section h3 {
+	padding: 20px 0;
+	padding-top: 40px;
+	font-size: 1.5em; 
+}
+
+.section h4 {
+	padding-bottom: 20px;
+	font-size: 1.4em;
+}
+
+.section h5 {
+	padding-top: 20px;
+	font-size: 1.2em;
+}
+
+.section ul {
+	font-size: 14pt;
+	list-style-type: square;
+	list-style-position: inside;
+	padding: 20px 0;
+}
+
+.section--content {display: flex; flex-direction: row; padding-bottom: 20px;}
+.section--content:nth-last-child(1) {padding-bottom: 0}
+
+.content--image img {max-width: 500px; height: auto; border-radius: 3px}
+
+.right {padding-left: 20px;}
+.left {padding-right: 20px;}
+.half {width: 50%;}
+.center {text-align: center;}
+.disconut {letter-spacing: 5px;}
+.premium {text-align: left;}
+
+}
+
+.form--double {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 10px 0;
+}
+
+.form--doubleitem {
+	display: flex;
+	flex-direction: column;
+	width: 490px;
+}
+
+.form--single {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 0;
+}
+
+.form--submit {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 10px;
+}
+
+.label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.label input:checked ~ .checkmark {
+  background-color: #2ecc71;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.label .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td, th {
+	border: 5px solid #0f212a;
+	padding: 2px 10px;
+	text-align: center;
+}
+
+.rank {
+	width: 50px;
+	padding: 0 5px;
+}
+
+.ranks--container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+label {
+	margin-right: 5px;
+	text-align: left !important;
+}
+
+.calculator {
+	padding: 20px;
+	background: rgba(0, 0, 0, .2);
+	border-radius: 10px;
+}
+
+.calculator--ranks {
+	padding: 10px 0;
+}
+
+.calculator--button {
+	margin-top: 15px;
+	padding: 20px;
+	background: #2ecc71;
+	color: #fff;
+	font-family: 'Poppins', sans-serif; 
+	border: none;
+	border-radius: 10px;
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 130%;
+	font-weight: bold;
+	letter-spacing: 2px;
+	cursor: pointer;
+	transition: background .5s;
+}
+
+.calculator--button:hover {
+	background: #1f8c4d;
+}
+
+.calculator--button:active {
+	background-color: #fff;
+	color: #111;
+}
+
+.price {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.button {
+	display: inline-flex;
+	height: 75px;
+	padding: 0;
+	background: #738ADB;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	overflow: hidden;
+	font-family: 'Poppins', sans-serif;
+	cursor: pointer;
+	font-size: 130%;
+	margin: 30px;
+	font-weight: bold;
+}
+
+.button:hover {
+	background: #576aab;
+}
+
+.button:active {
+	background: #212840;
+}
+
+.button--text, .button--icon {
+	display: inline-flex;
+	align-items: center;
+	padding: 0 25px;
+	color: #fff;
+	height: 100%;
+}
+
+.button--text {
+	width: 100%;
+	justify-content: center;
+	text-align: center;
+}
+
+.button--icon {
+	background: rgba(0, 0, 0, .1);
+}
+
+select {
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	font-family: 'Poppins', sans-serif; 
+}
+
+.section a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.section a, .section a:visited, .section a:active {
+	color: #f70;
+	transition: color .5s
+}
+
+.section a:hover {
+	color: #c10;
+}
+
+.header--small--text {
+	display: inline-block;
+	padding-bottom: 20px;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.nomargin {
+	margin: 0 !important;
+}
+
+.footer {
+	display: flex; 
+	justify-content: space-evenly;
+	text-align: center;
+
+	color: #aaa;
+	padding: 30px;
+	text-align: center;
+	font-weight: 300;
+	font-size: 12pt;
+	letter-spacing: 1px;
+}
+
+.footer .socials a {
+	padding: 0 5px;
+}
+
+.footer a, .footer a:visited, .footer a:active {
+	color: #aaa;
+	transition: color .5s
+}
+
+.footer a:hover {
+	color: #ff0;
+}
+
+.footer--element {
+	width: 150px;
+}
+
+.visuallyhidden {position: absolute !important;clip: rect(1px 1px 1px 1px); /* IE6, IE7 */clip: rect(1px, 1px, 1px, 1px); padding:0 !important;border:0 !important; height: 1px !important; width: 1px !important; overflow: hidden;}
+
+@media (max-width: 1200px) {
+	.section--container {padding-left: 50px; padding-right: 50px}
+	.form--doubleitem {width: 49%}
+}
+
+@media (max-width: 1000px) {
+	.nav {display: none;}
+	.only--mobile {display: inline-block; margin-top: 20px; width: auto; height: auto;}
+	.only--pc {display: none; height: 0; width: 0;}
+	.main {margin: 0; width: 100vw; padding: 0 20px; max-width: 100%;}
+	.logo--main {width: 80vw; margin-top: 20px}
+	.main--container {min-height: 100vh}
+	.main--description {font-size: 1.2em;}
+	.main--items {width: 100%; flex-direction: column; margin: 0; margin-bottom: 50px; align-items: center;}
+	.main--item {padding: 20px; font-size: .75em}
+	#localization {order: -1;}
+
+	.section {width: 100vw; margin: 30px 0; padding: 0 30px;}
+	.section h2 {font-size: 1.4em; margin-bottom: 20px}
+	.section p {font-size: 1em;}
+	.section ul {font-size: .75em;}
+	.section--content {flex-direction: column;}
+	.section--container {padding: 0}
+	.content--image {text-align: center; padding-top: 10px}
+	.content--image img {max-width: 100vw; width: 100%; height: auto;}
+	.right {padding-left: 0}
+	.left {padding-right: 0; order: 2}
+
+	.calculator--button {padding: 10px;}
+
+	label {font-size: 1.1em}
+
+	.map--container {height: 200px;}
+	.header--small--text {padding-bottom: 20px}
+
+	.button {margin: 30px 0; width: 100%;}
+
+	.footer {flex-direction: column; padding-top: 20px; padding-bottom: 0}
+	.footer p, .footer a {padding: 20px;}
+	.footer--element {width: auto;}
+	.half {width: 100%;}
+	#arrow-up {display: none} /*można dać order: -1 jeśli chcemy mieć strzałkę w stopce*/
+}
+
+::selection {background-color: #ff0; color: #111;}
+::-moz-selection {background-color: #ff0; color: #111;}
