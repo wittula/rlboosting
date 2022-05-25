@@ -152,7 +152,15 @@ function calculate() {
 		let plnOutput = plnPrice * priceMultiplier;
 		plnOutput = plnOutput.toFixed(2);
 
-		priceTextElement.innerHTML = 'Cena: <strong class="highlight-y">' + crOutput + ' cr</strong> / <strong class="highlight-y">' + plnOutput + ' PLN</strong> (' + sign + pricePercent + '%)';
+		let priceOutput = '';
+
+		if (selectedPaymentMethod == 'psc') {
+			priceOutput = 'Cena: <strong class="highlight-y">' + plnOutput + ' PLN</strong> <strong>PSC</strong> (' + sign + pricePercent + '%)';
+		} else {
+			priceOutput = 'Cena: <strong class="highlight-y">' + crOutput + ' cr</strong> / <strong class="highlight-y">' + plnOutput + ' PLN</strong> (' + sign + pricePercent + '%)';
+		}
+
+		priceTextElement.innerHTML = priceOutput;
 
 	}
 }
