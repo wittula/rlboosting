@@ -14,6 +14,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="animate.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
@@ -39,23 +40,23 @@
   <body>
     <div class="main--container" id="main">
       <main class="main">
-        <h1 class="visuallyhidden">Wprowadzenie</h1>
+        <h1 class="only--mobile">Rocket League Boosting</h1>
         <p class="main--description">
           Nie jesteś zadowolony z Twojej
-          <strong class="highlight-y">obecnej rangi?</strong> Podobają Ci się
+          <strong class="highlight-y">obecnej rangi</strong>? Podobają Ci się
           <strong>nagrody za sezon</strong> których nie jesteś w stanie wbić
           samodzielnie? Trafiłeś w dobre miejsce - oferujemy
           <strong class="highlight-y">boosting</strong> w
           <strong>Rocket League</strong>
         </p>
-        <div class="main--items">
-          <div class="main--item" id="localization">
+        <div class="main--items only--pc">
+          <div class="main--item">
             <i class="fa-solid fa-arrow-trend-up fa-2x"></i>
             <p class="main--info">Szybko i sprawnie</p>
             <p class="main--info-value">100% zadowolenia klientów</p>
           </div>
 
-          <div class="main--item" id="localization">
+          <div class="main--item">
             <i class="fa-solid fa-bell-slash fa-2x"></i>
             <p class="main--info">Dyskretnie</p>
             <p class="main--info-value">nikomu nie mówimy kogo boostujemy</p>
@@ -69,20 +70,43 @@
             </p>
           </div>
         </div>
+
+				<div class="main--items only--pc wow bounce" data-wow-delay="2s">
+          <a href="#price-list" class="main--item">
+            <i class="fa-solid fa-angles-down"></i>
+          </a>
       </main>
     </div>
 
-    <div class="section--container">
+		<div class="waves firstWave">
+			<svg
+				data-name="Layer 1"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1200 120"
+				preserveAspectRatio="none"
+			>
+				<path
+					d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+					opacity=".25"
+					class="shape-fill"
+				></path>
+				<path
+					d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+					opacity=".5"
+					class="shape-fill"
+				></path>
+				<path
+					d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+					class="shape-fill"
+				></path>
+			</svg>
+		</div>
+
+    <div class="section--container section--pricing">
       <section class="section" id="price-list">
         <h2 class="nomargin">Cennik</h2>
         <span class="header--small--text"
-          >(nagrody sezonowe są wliczone w cenę)</span
-        >
-        <p class="discount">
-          Każda dodatkowa ranga (gdy mamy boostować więcej niż jedną rangę) daje
-          <strong class="highlight-y">1% rabatu</strong> do zamówienia!
-        </p>
-
+          >(nagrody sezonowe są wliczone w cenę)</span>
         <br />
 
         <div class="section--content">
@@ -117,7 +141,7 @@
                   <option value="duo" selected>2v2</option>
                   <option value="trio">3v3 (+50%)</option>
                   <option value="rumble">Rumble (+50%)</option>
-                  <option value="hoops">Hoops (+50%)</option>
+                  <option value="hoops">Hoops (+15%)</option>
                 </select>
               </div>
 
@@ -146,20 +170,22 @@
                   <span class="checkmark"></span>
                 </label>
               </div>
-
-              <p id="price" class="price"></p>
+              
+              <div class="price--bar">
+                <span id="price" class="price"></span>
+              </div>
             </div>
 
             <br />
 
             <h4>Ważne!</h4>
             <p class="premium">
-              Rangi <span class="highlight-y">GC2 - SSL</span> dotyczą tylko
-              trybu <strong class="highlight-y">1v1</strong> oraz
-              <strong class="highlight-y">hoops</strong>!
+              Rangi <strong>GC2 - SSL</strong> dotyczą tylko
+              trybu <strong>1v1</strong>, 
+              <strong>hoops</strong> oraz <strong>rumble</strong>!
             </p>
             <p class="premium">
-              Przedstawione ceny są <span class="highlight-y">poglądowe</span> -
+              Przedstawione ceny są <strong>poglądowe</strong> -
               szczegółowe informacje na naszym
               <a href="https://discord.gg/2SRhaDYrPr">serwerze Discord</a> u
               moderacji bądź we <strong>wiadomości prywatnej</strong>.
@@ -169,7 +195,13 @@
       </section>
     </div>
 
-    <div class="section--container">
+		<div class="waves secondWave">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+			</svg>
+		</div>
+
+    <div class="section--container section--about">
       <section class="section" id="about">
         <h2>O nas</h2>
         <div class="section--content">
@@ -186,13 +218,13 @@
           </div>
 
           <div class="content--image right">
-            <img src="img/insake.png" alt="insake" />
+            <img src="img/insake.png" alt="insake" class="wow fadeInRight" />
           </div>
         </div>
 
         <div class="section--content">
           <div class="content--image left">
-            <img src="img/czapla.png" alt="czapla" />
+            <img src="img/czapla.png" alt="czapla" class="wow fadeInLeft" />
           </div>
 
           <div class="content--text">
@@ -217,65 +249,114 @@
           <div class="content--text">
             <h4>Najczęściej zadawane pytania</h4>
 
-            <h5>Na jakich serwerach oferujecie swoje usługi?</h5>
-            <p>Krótka, prosta odpowiedź - <strong>WSZYSTKICH</strong></p>
+						<div class="faq">
+							<div>
+									<details>
+											<summary><span>Na jakich serwerach oferujecie swoje usługi?</span>
+													<div class="chevron">
+															<span class="chev"></span>
+													</div>
+											</summary>
+									</details>
+									<div class="animate">
+											<p class="content">
+												Krótka, prosta odpowiedź - <strong>WSZYSTKICH</strong>.
+											</p>
+									</div>
+							</div>
 
-            <h5>
-              Czy jest możliwość blokady konta przez Epic Games za MMR Boosting?
-            </h5>
-            <p>
-              U nas masz pewnośc, że nie dostaniesz bana, gdyż każdy z naszych
-              boosterów ma obowiązek używać VPN podczas gry
-              <i>(jeśli klient jest z innego regionu)</i>.
-            </p>
+							<div>
+								<details>
+										<summary><span>Czy jest możliwość blokady konta przez Epic Games za MMR Boosting?</span>
+												<div class="chevron">
+														<span class="chev"></span>
+												</div>
+										</summary>
+								</details>
+								<div class="animate">
+										<p class="content">
+											U nas masz pewnośc, że nie dostaniesz bana, gdyż każdy z naszych
+											boosterów ma obowiązek używać VPN podczas gry
+											<i>(jeśli klient jest z innego regionu)</i>.
+										</p>
+								</div>
+							</div>
 
-            <h5>Ile potrwa MMR Boosting mojego konta?</h5>
-            <p>
-              Żaden serwis nie jest w stanie odpowiedzieć na to pytanie
-              dokładnie. Wszystko zależy od wielu czynników takich jak np. Twoje
-              MMR czy inne zdarzenia losowe. Możemy za to napisać iż
-              <strong>ŚREDNIO</strong> wbijamy jedną rangę dziennie.
-            </p>
+							<div>
+								<details>
+										<summary><span>Ile potrwa MMR Boosting mojego konta?</span>
+												<div class="chevron">
+														<span class="chev"></span>
+												</div>
+										</summary>
+								</details>
+								<div class="animate">
+										<p class="content">
+											Żaden serwis nie jest w stanie odpowiedzieć na to pytanie dokładnie. 
+											Wszystko zależy od wielu czynników takich jak np. Twoje MMR czy inne 
+											zdarzenia losowe. Możemy za to napisać iż <strong>ŚREDNIO</strong> 
+											wbijamy jedną rangę dziennie.
+										</p>
+								</div>
+							</div>
 
-            <h5>Kiedy rozpocznie się mój boosting?</h5>
-            <p>
-              Zlecenie rozpoczynamy najszybciej jak to możliwe, przeważnie
-              rozpoczyna się tego samego dnia lub maksymalnie następnego.
-            </p>
+							<div>
+								<details>
+										<summary><span>Czy mogę w jakiś sposób skontrolować postęp MMR Boostera?</span>
+												<div class="chevron">
+														<span class="chev"></span>
+												</div>
+										</summary>
+								</details>
+								<div class="animate">
+										<p class="content">
+											Tak, wystarczy że skontaktujesz się z boosterem na prywatnym
+              				kanale, bądź wejdziesz na swojego
+              				<a href="https://rocketleague.tracker.network">trackera</a>.
+										</p>
+								</div>
+							</div>
 
-            <h5>Czy mogę w jakiś sposób skontrolować postęp MMR Boostera?</h5>
-            <p>
-              Tak, wystarczy że skontaktujesz się z boosterem na prywatnym
-              kanale, bądź wejdziesz na swojego
-              <a href="https://rocketleague.tracker.network">trackera</a>
-            </p>
+							<div>
+								<details>
+										<summary><span>Czy mogę grać podczas boostowania konta?</span>
+												<div class="chevron">
+														<span class="chev"></span>
+												</div>
+										</summary>
+								</details>
+								<div class="animate">
+										<p class="content">
+											Oczywiście, że tak. Wystarczy jedynie określić w jakich godzinach
+              				będziesz na swoim koncie poprzez kontakt z nami lub boosterem na
+              				prywatnym kanale.
+										</p>
 
-            <h5>Czy mogę grać podczas boostowania konta?</h5>
-            <p>
-              Oczywiście, że tak. Wystarczy jedynie określić w jakich godzinach
-              będziesz na swoim koncie poprzez kontakt z nami lub boosterem na
-              prywatnym kanale.
-            </p>
-
-            <p>
-              Surowo <strong class="highlight-r">ZABRONIONE</strong> jest wtedy
-              granie <strong>GIER RANKINGOWYCH</strong>. Konsekwencją grania
-              rankedów podczas procesu boostingu konta jest zatrzymanie
-              wykonywania zamówionej usługi bez zwrotu pieniędzy z naszej
-              strony.
-            </p>
+										<p class="content">
+											Surowo <strong class="highlight-r">ZABRONIONE</strong> jest wtedy
+											granie <strong>GIER RANKINGOWYCH</strong>. Konsekwencją grania
+											rankedów podczas procesu boostingu konta jest zatrzymanie
+											wykonywania zamówionej usługi bez zwrotu pieniędzy z naszej
+											strony.
+										</p>
+								</div>
+							</div>
           </div>
         </div>
       </section>
     </div>
 
-    <div class="section--container">
+		<div class="waves-top thirdWave">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+					<path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+					<path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+			</svg>
+	</div>
+
+    <div class="section--container section--contact">
       <section class="section" id="contact">
-        <h2>Kontakt</h2>
-        <p>
-          Wejdź na nasz <span class="highlight-y">serwer Discord</span> gdzie
-          dowiesz się więcej, klikając przycisk poniżej!
-        </p>
+        <h2 class="visuallyhidden">Kontakt</h2>
         <div class="center">
           <a href="https://discord.gg/2SRhaDYrPr" class="button">
             <span class="button--icon"
@@ -287,7 +368,7 @@
       </section>
     </div>
 
-    <footer class="footer">
+    <footer class="footer only--pc">
       <div class="socials footer--element">
         <a href="https://discord.gg/2SRhaDYrPr"
           ><i class="fab fa-discord fa-lg"></i
@@ -301,6 +382,12 @@
     </footer>
 
     <script src="script.js"></script>
+		<script src="wow.min.js"></script>
+
+		<script>
+			new WOW().init();
+		</script>
+
     <script
       src="https://kit.fontawesome.com/50b3ee0297.js"
       crossorigin="anonymous"

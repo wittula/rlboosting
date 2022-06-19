@@ -38,9 +38,9 @@ const priceList = [
   [800, 16], // c2 - c3
   [1000, 20], // c3 - gc1
 
-  [4000, 80], // gc1 - gc2
-  [8000, 160], // gc2 - gc3
-  [12000, 240], // gc3 - ssl
+  [3000, 60], // gc1 - gc2
+  [7000, 140], // gc2 - gc3
+  [10000, 200], // gc3 - ssl
 ];
 
 const gamemodes = {
@@ -48,7 +48,7 @@ const gamemodes = {
   duo: 0,
   trio: 50,
   rumble: 50,
-  hoops: 50,
+  hoops: 15,
 };
 
 const paymentMethods = {
@@ -173,12 +173,6 @@ function calculate() {
     pricePercent += playWithBoosterPercentage;
   }
 
-  if (rankDifference > 1) {
-    for (let i = 1; i < rankDifference; i++) {
-      pricePercent -= multiRangPercentage;
-    }
-  }
-
   let sign = pricePercent > 0 ? "+" : "";
 
   let priceMultiplier = (100 + pricePercent) / 100;
@@ -189,10 +183,11 @@ function calculate() {
   } else if (
     selectedMode != "solo" &&
     selectedMode != "hoops" &&
+    selectedMode != "rumble" &&
     desiredRankID > 15
   ) {
     priceTextElement.innerHTML =
-      'Rangi <strong class="highlight-y">GC2 - SSL</strong> możliwe do wbicia tylko na trybie <strong class="highlight-y">1v1</strong> oraz <strong class="highlight-y">hoops</strong>!';
+      'Rangi <strong class="highlight-y">GC2 - SSL</strong> możliwe do wbicia tylko na trybie <strong class="highlight-y">1v1</strong>, <strong class="highlight-y">hoops</strong> oraz <strong class="highlight-y">rumble</strong>!';
   } else {
     for (let i = actualRankID; i < desiredRankID; i++) {
       crPrice += priceList[i][0];
